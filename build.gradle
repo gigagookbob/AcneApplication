@@ -3,9 +3,16 @@ buildscript {
     repositories {
         google()
         mavenCentral()
-        maven { url 'https://naver.jfrog.io/artifactory/maven/' }
-        maven { url 'https://navercorp.bintray.com/maps' }
-        maven{ url 'https://devrepo.kakao.com/nexus/content/groups/public/' }
+        // 기존 deprecated 주석 처리
+        // https://naver.jfrog.io/artifactory/maven/
+        // ✅ NAVER Map SDK (신규 저장소)
+        maven { url 'https://repository.map.naver.com/archive/maven' }
+
+        // 기존 deprecated 주석 처리
+//        maven { url 'https://navercorp.bintray.com/maps' }
+        // ✅ KakaoMap SDK v2 저장소
+        maven { url 'https://devrepo.kakao.com/nexus/repository/kakaomap-releases/' }
+
         maven { url 'https://jitpack.io' }
     }
 
